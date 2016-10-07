@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class MenuItem : MonoBehaviour {
+	public string topicName;
+	private CanvasManager canMan;
 
-	// Use this for initialization
-	void Start () {
-	
+	void Start(){
+		canMan = GetComponent<CanvasManager> ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public void OnPointerClick( PointerEventData data )
+	{
+		Debug.Log( "OnPointerClick called." );
+		Debug.Log (data.button);
+		canMan.OpenConversationCanvas (topicName);
 	}
+
 }
