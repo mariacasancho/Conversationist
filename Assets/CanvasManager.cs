@@ -9,7 +9,7 @@ public class CanvasManager : MonoBehaviour {
 	public string currentTopic;
 
 
-
+// Managing canvases, enabling and disabling canvases when necessary
 
 	void Start(){
 
